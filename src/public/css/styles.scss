@@ -1,0 +1,55 @@
+// variables
+$primary-color: #212121;
+$dark-color: #1A1A1A;
+$font-color: #fff;
+
+body {
+  background-color: $primary-color;
+}
+
+.dark-color {
+  background: $dark-color;
+}
+
+/* label color */
+.input-field label {
+  color: $font-color;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: $font-color;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid $font-color;
+  box-shadow: 0 1px 0 0 $font-color;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid $font-color;
+  box-shadow: 0 1px 0 0 $font-color;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid $font-color;
+  box-shadow: 0 1px 0 0 $font-color;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: $font-color;
+}
+
+/* margins */
+
+.m-t-10 {
+  margin-top: 10px;
+}
+.m-t-20 {
+  margin-top: 20px;
+}
+.m-t-30 {
+  margin-top: 30px;
+}
+.m-t-40 {
+  margin-top: 40px;
+}

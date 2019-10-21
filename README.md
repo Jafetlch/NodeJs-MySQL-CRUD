@@ -1,6 +1,22 @@
 # NodeJs MySQL CRUD and Authentication
+It's a simple app to save links.
 
 ## Description
+CRUD using Node as a back-end and MySQL as a database
+
+### Routes
+
+### **Auth**
+```
+/signup
+```
+
+#### **Links** 
+```
+/links
+/links/add
+/links/edit/:id
+```
 
 ## Setup
 
@@ -51,3 +67,11 @@ ALTER TABLE links
 
 DESCRIBE links;
 ```
+
+## Screenshots
+
+![](./Docs/screenshots/localhost_5000_signup.png)
+
+![](./Docs/screenshots/localhost_5000_links.png)
+
+![](./Docs/screenshots/localhost_5000_links_edit_12.png)

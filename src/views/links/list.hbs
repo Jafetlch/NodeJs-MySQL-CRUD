@@ -1,0 +1,29 @@
+<div class="container">
+  {{#each links}}
+  <div class="col s12 m5 m-t-40">
+    <div class="card dark-color">
+      <div class="card-content white-text">
+        <span class="card-title"><a href="{{url}}" target="_blank">{{title}}</a></span>
+        <p class="blue-text text-darken-2"><a href="{{url}}" target="_blank">{{url}}</a></p>
+        <p>{{description}}</p>
+        <p class="grey-text lighten-1">{{timeago created_at}}</p>
+      </div>
+      <div class="card-action right-align">
+        <a href="/links/edit/{{id}}" class="btn">Edit</a>
+        <a href="/links/delete/{{id}}" class="btn pink lighten-1">Delete</a>
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <div class="col s12 m5 m-t-40">
+    <div class="card dark-color">
+      <div class="card-content white-text">
+        <span class="card-title">There are not links saved yet.</span>
+      </div>
+      <div class="card-action center-align">
+        <a href="/links/add" class="btn">Create</a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

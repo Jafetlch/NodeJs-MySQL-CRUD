@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col s12 m5 m-t-40">
+    <div class="card dark-color">
+      <div class="card-content white-text">
+        <form action="/links/add" method="POST">
+          <div class="input-field col s6">
+            <input id="title" type="text" class="validate white-text" name="title">
+            <label for="title">Title</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="url" type="url" class="validate white-text" name="url">
+            <label for="url">Url</label>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="description" class="materialize-textarea white-text" name="description"></textarea>
+            <label for="description">Description</label>
+          </div>
+          <div class="input-field col s12 center-align">
+            <a href="/links" class="waves-effect waves-teal btn-flat white-text">Cancel</a>
+            <button type="submit" class="waves-effect waves-light btn">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
