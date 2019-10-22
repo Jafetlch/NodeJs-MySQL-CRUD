@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m4 offset-m4">
+      <div class="card dark-color m-t-40">
+        <div class="card-content white-text">
+          <h3 class="center-align card-title">Welcome</h3>
+        </div>
+        <div class="card-action center-align">
+          {{#if user}}
+          <a href="/links/add">Store a new Link</a>
+          {{else}}
+          <a href="/signin">Store a new Link</a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

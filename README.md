@@ -20,6 +20,11 @@ CRUD using Node as a back-end and MySQL as a database
 
 ## Setup
 
+### Start the project 
+```
+npm run dev
+```
+
 ### MySQL
 ```sql
 CREATE DATABASE f34th3r_links;

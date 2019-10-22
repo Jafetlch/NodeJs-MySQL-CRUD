@@ -9,11 +9,11 @@ const passport = require('passport')
 
 const { database } = require('./src/keys')
 
-// init
+// fth init
 const app = express()
 require('./src/lib/passport')
 
-// settings
+// fth settings
 app.set('port', process.env.PORT || 5000)
 app.set('views', path.join(__dirname, './src/views'))
 app.engine(
@@ -28,7 +28,7 @@ app.engine(
 )
 app.set('view engine', '.hbs')
 
-// Middlewares
+// fth Middlewares
 app.use(
   session({
     secret: 'feather.io',
@@ -44,20 +44,22 @@ app.use(express.json())
 app.use(passport.initialize())
 app.use(passport.session())
 
-// Variables
+// fth Variables
 app.use((req, res, next) => {
   app.locals.success = req.flash('success')
+  app.locals.success = req.flash('message')
+  app.locals.user = req.user
   next()
 })
 
-// Routes
+// fth Routes
 app.use(require('./src/routes'))
-app.use(require('./src/routes/authntication'))
+app.use(require('./src/routes/authenticate'))
 app.use('/links', require('./src/routes/links'))
 
-// Public
+// fth Public
 app.use(express.static(path.join(__dirname, './src/public')))
-// Server
+// fth Server
 app.listen(app.get('port'), () =>
   console.log(`Server on port ${app.get('port')}`)
 )

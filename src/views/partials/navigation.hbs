@@ -1,10 +1,17 @@
 <nav class="dark-color">
   <div class="container nav-wrapper">
-    <a href="/links" class="brand-logo">🐼-Links</a>
+    <a href="/" class="brand-logo">🐼-Links</a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
+      {{#if user}}
+      <li><a href="/links">List links</a></li>
       <li><a href="/links/add">Create</a></li>
-      <li><a href="collapsible.html">Logout</a></li>
+      <li><a href="/profile">Profile</a></li>
+      <li><a href="/logout">Logout</a></li>
+      {{else}}
+      <li><a href="/signup">SignUp</a></li>
+      <li><a href="/signin">SignIn</a></li>
+      {{/if}}
     </ul>
   </div>
 </nav>
